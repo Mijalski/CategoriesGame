@@ -1,6 +1,6 @@
-﻿using GameLogic.Dtos;
+﻿using CategoriesGameContracts.Contracts;
 
-namespace CategoriesGameServer.Logics
+namespace CategoriesGameServer.Actions
 {
     public class StartGameAction
     {

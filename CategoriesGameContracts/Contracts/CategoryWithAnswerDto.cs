@@ -1,4 +1,4 @@
-﻿namespace GameLogic.Dtos
+﻿namespace CategoriesGameContracts.Contracts
 {
     public record CategoryWithAnswerDto(string Category, string Answer);
 }

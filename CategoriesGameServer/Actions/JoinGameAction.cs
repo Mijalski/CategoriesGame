@@ -1,6 +1,4 @@
-﻿using GameLogic.Dtos;
-
-namespace CategoriesGameServer.Logics
+﻿namespace CategoriesGameServer.Actions
 {
     public class JoinGameAction
     {

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CategoriesGameServer", "Cat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic", "GameLogic\GameLogic.csproj", "{47BE0C24-4C0B-4CCB-9740-521D590550A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture", "Infrastucture\Infrastucture.csproj", "{56210CA3-6E86-4A30-B785-F50D8F6CB12F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastucture", "Infrastucture\Infrastucture.csproj", "{56210CA3-6E86-4A30-B785-F50D8F6CB12F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoriesGameClient", "CategoriesGameClient\CategoriesGameClient.csproj", "{6151E1A2-D9FB-4AB9-913F-87E88F6BE14A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CategoriesGameClient", "CategoriesGameClient\CategoriesGameClient.csproj", "{6151E1A2-D9FB-4AB9-913F-87E88F6BE14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CategoriesGameContracts", "CategoriesGameContracts\CategoriesGameContracts.csproj", "{5A04E3ED-D42D-4B98-88D8-E7B7F11202BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6151E1A2-D9FB-4AB9-913F-87E88F6BE14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6151E1A2-D9FB-4AB9-913F-87E88F6BE14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6151E1A2-D9FB-4AB9-913F-87E88F6BE14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A04E3ED-D42D-4B98-88D8-E7B7F11202BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A04E3ED-D42D-4B98-88D8-E7B7F11202BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A04E3ED-D42D-4B98-88D8-E7B7F11202BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A04E3ED-D42D-4B98-88D8-E7B7F11202BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

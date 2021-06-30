@@ -1,4 +1,5 @@
 ﻿using CategoriesGameServer.Logics;
+using GameLogic.Logics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,12 @@ namespace Infrastucture.Repositories
         {
             _games = new();
         }
+
+        public ValueTask<GameState> GetGameStateAsync(string gameCode, CancellationToken cancellationToken = default)
+        {
+            return ValueTask.FromResult(_games[gameCode]);
+        }
+
 
         public ValueTask CreateGameAsync(string gameCode, GameState state,
             CancellationToken cancellationToken = default)
@@ -34,6 +41,33 @@ namespace Infrastucture.Repositories
         public ValueTask AddPlayerToGameAsync(string gameCode, GamePlayer player, CancellationToken cancellationToken = default)
         {
             _games[gameCode].Players = _games[gameCode].Players.Append(player);
+
+            return ValueTask.CompletedTask;
+        }
+
+        public ValueTask AddRoundToGameAsync(string gameCode, GameRound round, CancellationToken cancellationToken = default)
+        {
+            var state = _games[gameCode];
+            round.SetPlayerCount(state.Players.Count());
+            state.Rounds = state.Rounds.Append(round);
+
+            return ValueTask.CompletedTask;
+        }
+
+        public ValueTask AddAnswersRangeToRoundAsync(string gameCode, IEnumerable<RoundAnswer> answers, 
+            CancellationToken cancellationToken = default)
+        {
+            var round = _games[gameCode].Rounds.Single(_ => _.IsFinishedAnswering);
+            round.AddAnswersRange(answers);
+
+            return ValueTask.CompletedTask;
+        }
+
+        public ValueTask AddVotesToAnswersAsync(string gameCode, IEnumerable<AnswerVote> votes,
+            CancellationToken cancellationToken = default)
+        {
+            var round = _games[gameCode].Rounds.Single(_ => _.IsFinishedAnswering);
+            round.AddVotesRange(votes);
 
             return ValueTask.CompletedTask;
         }
